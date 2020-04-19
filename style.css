@@ -1,0 +1,299 @@
+/*COLORS*/
+/*BACKGROUNDS*/
+.bg-1 {
+  background: #e9f9ff;
+}
+
+.bg-2 {
+  background: #fdfdfd;
+}
+
+.bg-3 {
+  background: #333;
+}
+
+.bg-4 {
+  background: #028eca;
+}
+
+.bg-5 {
+  background: #d88526;
+}
+
+.bg-other {
+  background: #ffe9c8;
+}
+
+.bg-darken {
+  background: rgba(51, 51, 51, 0.3);
+}
+
+/*FONTS*/
+/*RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/*SMALLER TEXT FOR MOBILE*/
+@media (max-width: 700px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+/*CONTAINERS*/
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.container-2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .container-2 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/*LAYOUT*/
+.cols-even {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cols-even > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-top: 1.3rem;
+  margin-bottom: 1.3rem;
+  margin-right: 1.9rem;
+}
+
+.cols-even img {
+  width: 100%;
+}
+
+.cols-even > :last-child {
+  margin-right: 0;
+}
+
+.rows-even {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.rows-even > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.rows-even img {
+  width: 100%;
+}
+
+.rows-even > :last-child {
+  margin-bottom: 0;
+}
+
+.cols-even > .rows-even {
+  margin-top: 0;
+}
+
+.cols-aside-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cols-aside-left > * {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.cols-aside-left img {
+  width: 100%;
+}
+
+.cols-aside-left > :first-child {
+  width: 200px;
+  margin-left: 0;
+}
+
+.cols-aside-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cols-aside-right > * {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 30px;
+}
+
+.cols-aside-right img {
+  width: 100%;
+}
+
+.cols-aside-right > :last-child {
+  width: 200px;
+  margin-right: 0;
+}
+
+/*BORDER*/
+.border-bottom {
+  border-bottom: solid #ddd 1px;
+}
+
+/*FONT AWESOME ICON*/
+.fa-icon-sm a i {
+  font-size: 2rem;
+  color: #666;
+}
+
+/*DISPLAY*/
+.hide {
+  display: none;
+}
+
+.nav-row ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-row ul li {
+  list-style: none;
+}
+
+.nav-row ul li a {
+  display: block;
+  padding: 15px;
+  color: black;
+  text-decoration: none;
+}
+
+/*BANNER*/
+.banner {
+  position: relative;
+  height: 70vh;
+  background: url("images/banner2.jpg");
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-size: auto 130%;
+}
+
+@media (max-width: 750px) {
+  .banner {
+    background-size: auto 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .banner {
+    background-size: 100%;
+  }
+}
+
+.banner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(51, 51, 51, 0.3);
+}
+
+#address-header {
+  margin-bottom: 20px;
+}
+
+#brand-header {
+  text-align: center;
+}
+
+#brand-header img {
+  height: 12rem;
+  width: 14rem;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+
+#fa-icons-header {
+  text-align: right;
+}
+
+#fa-icons-header a {
+  margin-right: 1.5rem;
+}
+
+#tagline {
+  text-align: center;
+  padding: 2rem;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #fdfdfd;
+}
+
+#nav-menu-main nav ul {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#nav-menu-main nav ul li a:hover {
+  background: #aee7ff;
+}
+
+footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#fa-icons-footer {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#fa-icons-footer a {
+  margin-right: 1.5rem;
+}
+
+#fa-icons-footer a i {
+  color: #fdfdfd;
+}
+
+#copyright {
+  text-align: center;
+  color: #fdfdfd;
+}
+
+#copyright a {
+  color: #fdfdfd;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */

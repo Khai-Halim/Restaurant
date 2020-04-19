@@ -1,0 +1,53 @@
+ #address-header{
+     margin-bottom: 20px;
+ }
+
+ #brand-header{
+    text-align: center;
+    img{
+        height: 12rem;
+        width: 14rem;
+        margin-top: -5px;
+        margin-bottom: -5px;
+            
+    }
+}
+
+ #fa-icons-header{
+     text-align: right;
+     a{
+        margin-right: 1.5rem;
+         i{
+
+         };
+     }
+ }
+
+ #tagline{
+     text-align: center;
+     padding: 2rem;
+     text-transform: uppercase;
+     font-family: 'Montserrat', sans-serif;
+     font-size: 1.2rem;
+     color: $white;
+ }
+
+ #nav-menu-main{
+     nav{
+       
+         ul{
+             justify-content: center;
+          
+             li{
+                
+                a{
+                    &:hover{
+                        background: $secondary-color-2;
+                    }
+                }
+             }
+            
+         }
+     }
+    
+ }
