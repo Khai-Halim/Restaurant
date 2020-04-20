@@ -9,10 +9,11 @@
     <title>Restaurant</title>
 </head>
 <body>
+                                        <!--******START HEADER*******-->
     <header>
-        <div class="bg-1">
+        <div id="header" class="bg-1">
             <div class="container">
-                <div class="cols-even">
+                <div id="header-lv-1" class="cols-even">
                     <div>
                         <address id="address-header">A: 178 Peel St, Tamworth <br> NSW 2340 <br> Ph: (02) 6766 9054 
                         </address>
@@ -21,15 +22,14 @@
                             10am - 9pm
                         </div>
                     </div>
-                    <div id="brand-header">
-                        <img src="images/logo3.png" alt="Flaming fusion logo">
+                    <div id="brand-lg">
+                        <a href="index.html"> <img src="images/logo3.png" alt="Flaming fusion logo"></a>          
                     </div>
                     <div id="fa-icons-header" class="fa-icon-sm">
                         <a href="https://www.facebook.com/flamingfusion2018/" target="blank"><i class="fab fa-facebook-square"></i></a>
                         <a href="#"><i class="fas fa-truck"></i></a>  
                     </div>           
                 </div>
-                
             </div>
         </div>
         <div class="bg-4">
@@ -40,19 +40,72 @@
             </div>
         </div>
         <div class="bg-1">
-            <div id="nav-menu-main" class="container">
-                <nav class="nav-row">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Our Menu</a></li>
-                        <li><a href="#">Delivery</a></li>
-                        <li><a href="#">Our Vision</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
+            <div class="container flex-between ">
+                <div id="brand-sm">
+                    <a href="index.html"> <img src="images/logo3.png" alt="Flaming fusion logo"></a>
+                </div>
+                <div id="nav-menu-main" >
+                    <nav class="nav-row">
+                        <ul>
+                            <li><a href="index.html" class="active">Home</a></li>
+                            <li><a href="#">Our Menu</a></li>
+                            <li><a href="#">Delivery</a></li>
+                            <li><a href="#">Our Vision</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
+        <div id="banner" class="banner">
+        </div>
     </header>
+                                        <!--******END HEADER*******-->
+                                        
+    <main>
+        <div class="bg-1">
+            <div id="welcome" class="container">
+                <span>Welcome to</span>
+                <h1>Flaming Fusion</h1>
+            </div>
+        </div>
+                                 <!--START INTRO-->
+        <div class="bg-1">
+            <div class="container cols-even">
+                <div>
+                    <img src="images/chef.jpg" alt="chef at flaming fusion" class="mg-bottom">
+                    <img src="images/chopping.jpg" alt="flaming fusion food preparation ">
+                </div>
+                <div>
+                    <div class="border-top">
+                        <div class="text-wrapper">
+                            <h2>Food for all</h2>
+                        </div>
+                        <div class="text-wrapper">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum natus laborum unde alias deleniti officia, suscipit ab maiores sed error perferendis hic. Laborum sapiente officiis nesciunt voluptatibus cupiditate accusantium quo.Eos quos, beatae voluptatibus quod exercitationem praesentium error in laudantium minima asperiores maiores eligendi assumenda hic! Cumque aliquid sequi dolor, ad corporis alias! Eveniet culpa beatae nostrum. Quo, hic aliquam.</p>          
+                        </div>
+                        <div class="text-wrapper">
+                            <a href="#" class="link-1">Check out our menu here</a>
+                        </div>
+                        <img src="images/banner.jpg" alt="Flaming fusion burger" class="mg-bottom">
+                        <img src="images/rice.jpg" alt="Flaming fusion rice">
+                    </div>
+                </div>
+                
+            </div>
+            <!--**END INTRO-->
+            <!--**START FOOD DELIVERY**-->
+
+            <div class="container cols-even">
+                <div id="delivery-link">
+                    <img src="images/delivery.jpg" alt="Tamworth food delivery">
+                    <div><a href="#">Order now</a></div>
+                </div>
+            </div>             
+    
+        </div>
+    </main>
+                                    <!--******END MAIN*******-->
     <footer class="bg-5">
         <div class="container">
             <div id="fa-icons-footer" class="fa-icon-sm">

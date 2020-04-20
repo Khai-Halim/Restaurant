@@ -1,15 +1,23 @@
+ header{
+     max-height: 100vh;
+     border: solid;
+     margin-right: 0;
+     #header{
+         padding-top: 0.5rem;
+     }
+ }
+ 
  #address-header{
      margin-bottom: 20px;
  }
 
- #brand-header{
+ #brand-lg{
     text-align: center;
     img{
         height: 12rem;
         width: 14rem;
         margin-top: -5px;
-        margin-bottom: -5px;
-            
+        margin-bottom: -5px;          
     }
 }
 
@@ -17,37 +25,49 @@
      text-align: right;
      a{
         margin-right: 1.5rem;
-         i{
-
-         };
+         i{};
      }
  }
 
  #tagline{
      text-align: center;
-     padding: 2rem;
+     padding: 1.5rem;
      text-transform: uppercase;
      font-family: 'Montserrat', sans-serif;
-     font-size: 1.2rem;
+     font-size: 1.3rem;
      color: $white;
  }
 
  #nav-menu-main{
      nav{
-       
+         padding-top: 1.6rem;
+         padding-bottom: 1.6rem;
          ul{
-             justify-content: center;
-          
+             justify-content: center; 
              li{
-                
                 a{
+                    padding: 1rem;
+                    text-transform: uppercase;
+                    transition: background-color 400ms;
                     &:hover{
                         background: $secondary-color-2;
                     }
                 }
              }
-            
          }
      }
-    
  }
+
+ #brand-sm{
+    text-align: center;
+    img{
+        height: 5rem;
+        width: 6rem;
+        margin: 0.7rem 0 0.4rem 0;        
+    }
+ }
+
+ //find banner class => _classes.scss
+#banner{
+    
+} 

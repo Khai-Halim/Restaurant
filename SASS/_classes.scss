@@ -8,14 +8,14 @@ $grey-4: #666;
 $grey-5: #4a4a4a;
 $primary-color-1: rgb(255, 231, 209);
 $primary-color-2: rgb(255, 190, 152);
-$primary-color-3: rgb(214, 179, 64);
+$primary-color-3: rgb(223, 175, 104);
 $primary-color-4: rgb(216, 133, 38);
 $primary-color-5: rgb(170, 0, 0);
 $secondary-color-1: rgb(233, 249, 255);
 $secondary-color-2: rgb(174, 231, 255);
 $secondary-color-3: rgb(106, 210, 255);
 $secondary-color-4: rgb(48, 192, 253);
-$secondary-color-5: rgb(2, 142, 202);
+$secondary-color-5: rgb(1, 95, 136);
 $other-color: rgb(255, 233, 200);
 $input-focus: rgb(172, 255, 248);
 $darken: rgba($color: $black, $alpha: 0.3);
@@ -36,6 +36,9 @@ $darken: rgba($color: $black, $alpha: 0.3);
 
                                     /*RESET*/
 *{margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif;}
+h1{font-family: 'Libre Baskerville', serif;  font-size: 3rem; font-style: italic;}
+h2{font-family: 'Roboto', sans-serif;  font-size: 2rem; font-style: italic;}
+p{line-height: 1.5rem;}
 
                             /*SMALLER TEXT FOR MOBILE*/
 @media (max-width: 700px){:root{font-size: 12px;}}
@@ -47,7 +50,8 @@ $darken: rgba($color: $black, $alpha: 0.3);
 @media(min-width: 1200px){
         .container-2{padding-left: 1.5rem; padding-right: 1.5rem;}}//LARGER CONTAINER
                                                 
-
+.text-wrapper{padding-left: 1rem; padding-right: 1rem; padding-bottom: 1rem;}
+//.text-wrapper:last-child{padding-bottom: 0;}
                             /*LAYOUT*/
 .cols-even{display: flex;
             >*{flex: 1; margin-top: 1.3rem; margin-bottom: 1.3rem; margin-right: 1.9rem;}
@@ -67,9 +71,12 @@ img{width: 100%;}
         >*{margin-top: 20px; margin-bottom: 20px;margin-right: 30px;} 
     img{width: 100%;} 
     >:last-child{ width: 200px; margin-right: 0;}}  //ASIDE BAR ON RIGHT
+
+.flex-between{display: flex; justify-content: space-between;}
                             
                             /*BORDER*/
 .border-bottom{border-bottom: solid $grey-1 1px;}                      //ADD BOTTOM BORDER
+.border-top{border-top: solid $grey-1 1px;}                            //ADD TOP BORDER
 
                             /*FONT AWESOME ICON*/
 .fa-icon-sm{a{i{font-size: 2rem;  color: $grey-4;}}
@@ -82,10 +89,36 @@ img{width: 100%;}
 .nav-row{ul{display: flex; li{list-style:none;a{display:block;padding:15px;color:black; text-decoration: none;}}}}                //CHANGE LIST TO ROW
 
                             /*BANNER*/
-.banner{position: relative; height: 70vh; background: url('images/banner2.jpg');
-        background-position: 100% 50%; background-repeat: no-repeat;
-        background-size: auto 130%;}
-        @media (max-width: 750px){.banner{background-size: auto 100%;}} //mobile version
+.banner{position: relative; height: calc(100vh - 30.5rem) ; background: url('images/banner.jpg');
+        background-position: 50% 50%; background-repeat: no-repeat;
+        background-size: 100% auto; }
+        
+        @media (max-width: 700px){.banner{background-size: auto 190%; height: 40vw;}} //mobile version
         @media (min-width: 1200px){.banner{background-size: 100%;}}     // big screen version 
 .banner::after{content: "";display: block;position: absolute;top: 0;left: 0;
-        height: 100%;width: 100%;background: $darken;}
+        height: 100%;width: 100%;background: rgba($color: $black, $alpha: 0.01);}
+
+
+                           /*ACTIVE*/
+.active{
+        background: $primary-color-3;
+        color: $white !important;
+        &:hover{
+                background: $primary-color-3 !important;
+                color: $white !important; 
+        }
+}
+
+                           /*MARGIN*/
+.mg-bottom{margin-bottom: 2rem;}
+
+                           /*LINKS*/
+.link-1{
+        color: $primary-color-4;
+        font-family: 'Libre Baskerville', serif;;
+        font-size: 1.2rem;
+        text-decoration: none;
+        &:hover{
+                color: $primary-color-3;
+        }
+}
