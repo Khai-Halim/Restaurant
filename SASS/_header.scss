@@ -38,12 +38,49 @@
      color: $white;
  }
 
+ #hamburger-checkbox{
+     display: none;
+ }
+
+ #hamburger-icon{
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 99;
+    span{
+            display: block;
+            margin:  15px 0;
+            background: black;
+            height: 3px;
+            width: 40px;
+            &::before{
+                content: "";
+                display: block;
+                width: 40px;
+                height: 3px;
+                background: black;
+                transform: translateY(10px);
+            }
+            &::after{
+                content: "";
+                display: block;
+                width: 40px;
+                height: 3px;
+                background: black;
+                transform: translateY(-13px);
+            }
+    }
+ }
+
  #nav-menu-main{
      nav{
          padding-top: 1.6rem;
          padding-bottom: 1.6rem;
          ul{
              justify-content: center; 
+             
              li{
                 a{
                     padding: 1rem;
@@ -61,13 +98,101 @@
  #brand-sm{
     text-align: center;
     img{
+        position: relative;
+        z-index: 99;
         height: 5rem;
         width: 6rem;
         margin: 0.7rem 0 0.4rem 0;        
     }
  }
 
+ @media (max-width: 700px){
+    #header-lv-1{
+        display: none;
+        // flex-direction: column-reverse;
+        // *{
+        //     margin-right: 0;
+        //     text-align: center;
+        // }
+        // :nth-child(2){
+        //     order: 2;
+        // }
+        // :first-child{
+        //     order: 1;   
+        // }
+    }
+    #tagline{
+        display: none;
+    }
+
+    #hamburger-checkbox{
+        &:checked ~ #nav-menu-main{
+            display: block;
+        }
+        &:checked ~ #cover-screen{
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;  
+            height: 100vh;
+            width: 100vw;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+        &:checked ~ #hamburger-icon{
+            span{
+                background: white;
+                &::before{
+                    content: "";            
+                    background: white;
+                }
+                &::after{
+                    content: "";
+                    background: white;
+                }
+            }
+        }
+    }
+
+    #hamburger-icon{
+        display: block;
+        
+    }
+
+     #nav-menu-main{
+         display: none;
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         z-index: 50;
+         background: rgba(14, 14, 14, 0.5);
+         nav{
+             padding-top: 7rem;
+             padding-bottom: 0;
+            ul{
+                flex-direction: column;
+                li{
+                    display: block;
+                    text-align: center;
+                }
+                a{
+                    color: $white;
+                    width: 100%;
+                    &:hover{
+                        background: $secondary-color-5 !important;
+                        color: white !important;
+                    }
+                }
+            }
+         }
+     }
+}
+
+
  //find banner class => _classes.scss
 #banner{
     
 } 
+
+
