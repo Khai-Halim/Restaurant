@@ -293,7 +293,6 @@ p {
 
 header {
   max-height: 100vh;
-  border: solid;
   margin-right: 0;
 }
 
@@ -302,7 +301,7 @@ header #header {
 }
 
 #address-header {
-  margin-bottom: 20px;
+  margin-bottom: 1.4rem;
 }
 
 #brand-lg {
@@ -312,8 +311,8 @@ header #header {
 #brand-lg img {
   height: 12rem;
   width: 14rem;
-  margin-top: -5px;
-  margin-bottom: -5px;
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
 }
 
 #fa-icons-header {
@@ -352,6 +351,8 @@ header #header {
   background: black;
   height: 3px;
   width: 40px;
+  -webkit-transition: background-color 700ms;
+  transition: background-color 700ms;
 }
 
 #hamburger-icon span::before {
@@ -362,6 +363,10 @@ header #header {
   background: black;
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
 }
 
 #hamburger-icon span::after {
@@ -372,6 +377,10 @@ header #header {
   background: black;
   -webkit-transform: translateY(-13px);
           transform: translateY(-13px);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
 }
 
 #nav-menu-main nav {
@@ -388,8 +397,12 @@ header #header {
 #nav-menu-main nav ul li a {
   padding: 1rem;
   text-transform: uppercase;
-  -webkit-transition: background-color 400ms;
-  transition: background-color 400ms;
+  -webkit-transition: background-color 300ms, color 300ms ease-in;
+  transition: background-color 300ms, color 300ms ease-in;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #nav-menu-main nav ul li a:hover {
@@ -408,48 +421,69 @@ header #header {
   margin: 0.7rem 0 0.4rem 0;
 }
 
-@media (max-width: 700px) {
+/**** SMALL SCREEN VERSION****/
+@media (max-width: 800px) {
+  #cover-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    -webkit-transition: background 500ms;
+    transition: background 500ms;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: -999;
+  }
   #header-lv-1 {
     display: none;
   }
   #tagline {
     display: none;
   }
+  #nav-menu-main {
+    visibility: hidden;
+  }
+  #nav-menu-main nav ul li a {
+    color: rgba(255, 255, 255, 0);
+  }
   #hamburger-checkbox:checked ~ #nav-menu-main {
-    display: block;
+    visibility: visible;
+  }
+  #hamburger-checkbox:checked ~ #nav-menu-main nav ul li a {
+    color: rgba(255, 255, 255, 0.999);
   }
   #hamburger-checkbox:checked ~ #cover-screen {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 98;
   }
   #hamburger-checkbox:checked ~ #hamburger-icon span {
-    background: white;
+    background: rgba(255, 255, 255, 0);
   }
   #hamburger-checkbox:checked ~ #hamburger-icon span::before {
     content: "";
     background: white;
+    -webkit-transform: translateY(0) rotate(45deg);
+            transform: translateY(0) rotate(45deg);
   }
   #hamburger-checkbox:checked ~ #hamburger-icon span::after {
     content: "";
     background: white;
+    -webkit-transform: translateY(-3px) rotate(-45deg);
+            transform: translateY(-3px) rotate(-45deg);
+  }
+  #hamburger-checkbox:checked #delivery-link {
+    display: none;
   }
   #hamburger-icon {
     display: block;
   }
   #nav-menu-main {
-    display: none;
     position: absolute;
+    visibility: hidden;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 50;
-    background: rgba(14, 14, 14, 0.5);
+    z-index: 98;
   }
   #nav-menu-main nav {
     padding-top: 7rem;
@@ -465,13 +499,12 @@ header #header {
     display: block;
     text-align: center;
   }
-  #nav-menu-main nav ul a {
-    color: #fdfdfd;
+  #nav-menu-main nav ul li a {
     width: 100%;
   }
-  #nav-menu-main nav ul a:hover {
-    background: #015f88 !important;
-    color: white !important;
+  #nav-menu-main nav ul li a:hover {
+    background: #015f88;
+    color: white;
   }
 }
 
@@ -513,6 +546,7 @@ footer {
   font-family: 'Libre Baskerville', serif;
   font-size: 3rem;
   font-weight: 100;
+  color: #d88526;
 }
 
 #welcome h1 {
@@ -520,11 +554,13 @@ footer {
   font-size: 3rem;
   letter-spacing: 0.1rem;
   font-style: italic;
+  color: #d88526;
 }
 
 #delivery-link {
   position: relative;
   margin-bottom: 4rem;
+  z-index: 3;
 }
 
 #delivery-link > div {
@@ -536,7 +572,6 @@ footer {
   -webkit-transform: translate(-50%, 50%);
           transform: translate(-50%, 50%);
   background: #dfaf68;
-  z-index: 99;
 }
 
 #delivery-link > div a {
@@ -554,26 +589,62 @@ footer {
   color: white;
 }
 
+#main-col-2 > div {
+  padding-top: 1rem;
+}
+
 @media (max-width: 700px) {
-  #header-lv-1 {
+  #main-cols {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  #header-lv-1 * {
+  #main-col-1 {
     margin-right: 0;
-    text-align: center;
-  }
-  #header-lv-1 :nth-child(2) {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
-  #header-lv-1 :first-child {
+  #main-col-2 {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    margin-right: 0;
+  }
+  .container {
+    padding: 0;
   }
 }
+
+#welcome-2 {
+  text-align: center;
+}
+
+#welcome-2 h1 {
+  display: block;
+  padding-top: 1rem;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 3rem;
+  font-weight: 100;
+  color: #d88526;
+}
+
+#banner-our-vision {
+  background-image: url(images/banner-our-vision.jpg);
+}
+
+/*
+learnings
+
+    using display: none property interferes with transitions such as color. Better off using visibility where possible. 
+    
+    specifying 2 different z-index  properties also interferes with transitions.
+
+Problems
+
+    There is an issue where the mobile menu dark cover background color will only transition one way. It will not transition backwards. I cannot use visibility instead of display because it then interferes with click events on the page. When I specify z-index: 999; the backwards transtion does not work.
+
+    Maybe css animation will be a better approach?
+*/
 /*# sourceMappingURL=style.css.map */

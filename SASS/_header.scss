@@ -1,6 +1,5 @@
  header{
      max-height: 100vh;
-     border: solid;
      margin-right: 0;
      #header{
          padding-top: 0.5rem;
@@ -8,7 +7,7 @@
  }
  
  #address-header{
-     margin-bottom: 20px;
+     margin-bottom: 1.4rem;
  }
 
  #brand-lg{
@@ -16,8 +15,8 @@
     img{
         height: 12rem;
         width: 14rem;
-        margin-top: -5px;
-        margin-bottom: -5px;          
+        margin-top: -0.5rem;
+        margin-bottom: -0.5rem;          
     }
 }
 
@@ -38,6 +37,9 @@
      color: $white;
  }
 
+ //find banner class => _classes.scss
+ #banner{} 
+
  #hamburger-checkbox{
      display: none;
  }
@@ -55,6 +57,7 @@
             background: black;
             height: 3px;
             width: 40px;
+            transition: background-color 700ms;
             &::before{
                 content: "";
                 display: block;
@@ -62,6 +65,7 @@
                 height: 3px;
                 background: black;
                 transform: translateY(10px);
+                transition: transform 300ms;
             }
             &::after{
                 content: "";
@@ -70,6 +74,7 @@
                 height: 3px;
                 background: black;
                 transform: translateY(-13px);
+                transition: transform 300ms;
             }
     }
  }
@@ -79,13 +84,13 @@
          padding-top: 1.6rem;
          padding-bottom: 1.6rem;
          ul{
-             justify-content: center; 
-             
+             justify-content: center;            
              li{
-                a{
+                a{  
                     padding: 1rem;
                     text-transform: uppercase;
-                    transition: background-color 400ms;
+                    transition: background-color 300ms, color 300ms ease-in;
+                    user-select: none;
                     &:hover{
                         background: $secondary-color-2;
                     }
@@ -106,67 +111,80 @@
     }
  }
 
- @media (max-width: 700px){
+            /**** SMALL SCREEN VERSION****/
+ @media (max-width: 800px){
+    #cover-screen{    
+        
+        position: fixed;    
+        top: 0;
+        left: 0; 
+        height: 100vh;
+        width: 100vw;
+        transition: background 500ms;
+        background: rgba(0, 0, 0, 0.1);
+        z-index: -999;
+    }
+
     #header-lv-1{
         display: none;
-        // flex-direction: column-reverse;
-        // *{
-        //     margin-right: 0;
-        //     text-align: center;
-        // }
-        // :nth-child(2){
-        //     order: 2;
-        // }
-        // :first-child{
-        //     order: 1;   
-        // }
     }
     #tagline{
         display: none;
     }
 
+    //display: none to display: block interferes with rgba color transition. I am using visibilty: hidden to visibility: visible instead.
+    #nav-menu-main{
+        visibility: hidden;
+        //display: none;  
+        nav ul li a{
+            color: rgba(255, 255, 255, 0);                
+        }
+    } 
+
     #hamburger-checkbox{
         &:checked ~ #nav-menu-main{
-            display: block;
+            //display: block;
+            visibility: visible;
+            nav ul li a{color:rgba(255, 255, 255, 0.999);}
         }
         &:checked ~ #cover-screen{
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;  
-            height: 100vh;
-            width: 100vw;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 2;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 98;
         }
         &:checked ~ #hamburger-icon{
             span{
-                background: white;
+                background: rgba(255, 255, 255, 0);
                 &::before{
                     content: "";            
                     background: white;
+                    transform:  translateY(0) rotate(45deg);
                 }
                 &::after{
                     content: "";
                     background: white;
+                    transform:  translateY(-3px) rotate(-45deg) ;
                 }
             }
+        }
+
+        &:checked #delivery-link{
+            display: none;
         }
     }
 
     #hamburger-icon{
-        display: block;
-        
+        display: block;      
     }
 
      #nav-menu-main{
-         display: none;
+         //display: none;
          position: absolute;
+         visibility: hidden;  
          top: 0;
          left: 0;
          width: 100%;
-         z-index: 50;
-         background: rgba(14, 14, 14, 0.5);
+         z-index: 98;
+         //background: rgba(14, 14, 14, 0.5);
          nav{
              padding-top: 7rem;
              padding-bottom: 0;
@@ -174,25 +192,23 @@
                 flex-direction: column;
                 li{
                     display: block;
-                    text-align: center;
-                }
-                a{
-                    color: $white;
-                    width: 100%;
-                    &:hover{
-                        background: $secondary-color-5 !important;
-                        color: white !important;
+                    text-align: center;     
+                    a{
+                        width: 100%;
+                        &:hover{
+                            background: $secondary-color-5;
+                            color: white;
+                        }
                     }
-                }
+                } 
             }
          }
      }
 }
 
+@media(max-width: 700px){}
 
- //find banner class => _classes.scss
-#banner{
-    
-} 
+
+
 
 

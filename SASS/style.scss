@@ -2,3 +2,18 @@
 @import 'header';
 @import 'footer';
 @import 'home-page';
+@import 'our-vision';
+
+/*
+learnings
+
+    using display: none property interferes with transitions such as color. Better off using visibility where possible. 
+    
+    specifying 2 different z-index  properties also interferes with transitions.
+
+Problems
+
+    There is an issue where the mobile menu dark cover background color will only transition one way. It will not transition backwards. I cannot use visibility instead of display because it then interferes with click events on the page. When I specify z-index: 999; the backwards transtion does not work.
+
+    Maybe css animation will be a better approach?
+*/
