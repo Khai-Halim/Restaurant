@@ -30,9 +30,7 @@ $darken: rgba($color: $black, $alpha: 0.3);
 .bg-darken{background: $darken;}
 
                                    /*FONTS*/
-@mixin font- {
-        
-}
+@mixin font- {}
 
                                     /*RESET*/
 *{margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif;}
