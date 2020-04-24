@@ -34,7 +34,7 @@ $darken: rgba($color: $black, $alpha: 0.3);
 
                                     /*RESET*/
 *{margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif;}
-h1{font-family: 'Libre Baskerville', serif;  font-size: 3rem; font-style: italic;}
+h1{font-family: 'Libre Baskerville', serif;  font-size: 3rem; font-style: italic; padding-bottom: 1.3rem;}
 h2{font-family: 'Roboto', sans-serif;  font-size: 2rem; font-style: italic;}
 p{line-height: 1.5rem;}
 
@@ -56,7 +56,7 @@ p{line-height: 1.5rem;}
 //.text-wrapper:last-child{padding-bottom: 0;}
                             /*LAYOUT*/
 .cols-even{display: flex;
-            >*{flex: 1; margin-top: 1.3rem; margin-bottom: 1.3rem; margin-right: 1.9rem;}
+            >*{flex: 1;  margin-right: 1.9rem;}         
             img{width: 100%;}
             >:last-child{margin-right: 0;}}        //EVEN COLUMNS
 
@@ -75,6 +75,13 @@ img{width: 100%;}
     >:last-child{ width: 200px; margin-right: 0;}}  //ASIDE BAR ON RIGHT
 
 .flex-between{display: flex; justify-content: space-between;}
+
+.col{
+        
+        >*{
+                margin-bottom: 2rem;
+        }      
+}
                             
                             /*BORDER*/
 .border-bottom{border-bottom: solid $grey-1 1px;}                      //ADD BOTTOM BORDER
@@ -91,7 +98,7 @@ img{width: 100%;}
 .nav-row{ul{display: flex; li{list-style:none;a{display:block;padding:15px;color:black; text-decoration: none;}}}}                //CHANGE LIST TO ROW
 
                             /*BANNER*/
-.banner{position: relative; height: calc(100vh - 30.5rem) ; background: url('images/banner.jpg');
+.banner{position: relative; height: calc(100vh - 27rem) ; background: url('images/banner.jpg');
         background-position: 50% 50%; background-repeat: no-repeat;
         background-size: 100% auto; }
         
@@ -124,3 +131,5 @@ img{width: 100%;}
                 color: $primary-color-3;
         }
 }
+
+

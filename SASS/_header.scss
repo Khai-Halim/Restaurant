@@ -2,7 +2,8 @@
      max-height: 100vh;
      margin-right: 0;
      #header{
-         padding-top: 0.5rem;
+         padding-top: 1.7rem;
+         padding-bottom: 1.7rem;
      }
  }
  
@@ -30,7 +31,7 @@
 
  #tagline{
      text-align: center;
-     padding: 1.5rem;
+     padding: 1rem;
      text-transform: uppercase;
      font-family: 'Montserrat', sans-serif;
      font-size: 1.3rem;
@@ -79,15 +80,37 @@
     }
  }
 
+ #brand-sm{
+     z-index: 99;
+    text-align: center;
+    a{
+        font-family: 'Kaushan Script', cursive;
+        font-size: 2rem;
+        display: block;
+        text-decoration: none;
+        padding: 0.5rem 0;
+        color: $primary-color-4;
+        text-shadow: -0.1rem 0.05rem 1px $black;
+        transition: color 1s linear;
+    }
+    // img{
+    //     position: relative;
+    //     z-index: 99;
+    //     height: 5rem;
+    //     width: 6rem;
+    //     margin: 0.7rem 0 0.4rem 0;        
+    // }
+ }
+
  #nav-menu-main{
      nav{
-         padding-top: 1.6rem;
-         padding-bottom: 1.6rem;
+         padding-top: 0.6rem;
+         padding-bottom: 0.6rem;
          ul{
              justify-content: center;            
              li{
                 a{  
-                    padding: 1rem;
+                    padding: 0.7rem;
                     text-transform: uppercase;
                     transition: background-color 300ms, color 300ms ease-in;
                     user-select: none;
@@ -100,21 +123,11 @@
      }
  }
 
- #brand-sm{
-    text-align: center;
-    img{
-        position: relative;
-        z-index: 99;
-        height: 5rem;
-        width: 6rem;
-        margin: 0.7rem 0 0.4rem 0;        
-    }
- }
+
 
             /**** SMALL SCREEN VERSION****/
  @media (max-width: 800px){
-    #cover-screen{    
-        
+    #cover-screen{          
         position: fixed;    
         top: 0;
         left: 0; 
@@ -137,7 +150,8 @@
         visibility: hidden;
         //display: none;  
         nav ul li a{
-            color: rgba(255, 255, 255, 0);                
+            color: rgba(255, 255, 255, 0); 
+            transition: color 900ms ease;               
         }
     } 
 
@@ -167,8 +181,8 @@
             }
         }
 
-        &:checked #delivery-link{
-            display: none;
+        &:checked ~ #brand-sm a{
+            color: $primary-color-1;
         }
     }
 
@@ -206,7 +220,11 @@
      }
 }
 
-@media(max-width: 700px){}
+@media(max-width: 700px){
+    #brand-sm{
+        padding-left: 1.5rem;
+    }
+}
 
 
 
