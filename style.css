@@ -42,6 +42,7 @@ h1 {
   font-family: 'Libre Baskerville', serif;
   font-size: 3rem;
   font-style: italic;
+  padding-bottom: 1.3rem;
 }
 
 h2 {
@@ -98,8 +99,6 @@ p {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-top: 1.3rem;
-  margin-bottom: 1.3rem;
   margin-right: 1.9rem;
 }
 
@@ -192,6 +191,10 @@ p {
           justify-content: space-between;
 }
 
+.col > * {
+  margin-bottom: 2rem;
+}
+
 /*BORDER*/
 .border-bottom {
   border-bottom: solid #ddd 1px;
@@ -232,7 +235,7 @@ p {
 /*BANNER*/
 .banner {
   position: relative;
-  height: calc(100vh - 30.5rem);
+  height: calc(100vh - 27rem);
   background: url("images/banner.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -297,7 +300,8 @@ header {
 }
 
 header #header {
-  padding-top: 0.5rem;
+  padding-top: 1.7rem;
+  padding-bottom: 1.7rem;
 }
 
 #address-header {
@@ -325,7 +329,7 @@ header #header {
 
 #tagline {
   text-align: center;
-  padding: 1.5rem;
+  padding: 1rem;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.3rem;
@@ -383,9 +387,26 @@ header #header {
   transition: transform 300ms, -webkit-transform 300ms;
 }
 
+#brand-sm {
+  z-index: 99;
+  text-align: center;
+}
+
+#brand-sm a {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2rem;
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  color: #d88526;
+  text-shadow: -0.1rem 0.05rem 1px #333;
+  -webkit-transition: color 1s linear;
+  transition: color 1s linear;
+}
+
 #nav-menu-main nav {
-  padding-top: 1.6rem;
-  padding-bottom: 1.6rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
 }
 
 #nav-menu-main nav ul {
@@ -395,7 +416,7 @@ header #header {
 }
 
 #nav-menu-main nav ul li a {
-  padding: 1rem;
+  padding: 0.7rem;
   text-transform: uppercase;
   -webkit-transition: background-color 300ms, color 300ms ease-in;
   transition: background-color 300ms, color 300ms ease-in;
@@ -407,18 +428,6 @@ header #header {
 
 #nav-menu-main nav ul li a:hover {
   background: #aee7ff;
-}
-
-#brand-sm {
-  text-align: center;
-}
-
-#brand-sm img {
-  position: relative;
-  z-index: 99;
-  height: 5rem;
-  width: 6rem;
-  margin: 0.7rem 0 0.4rem 0;
 }
 
 /**** SMALL SCREEN VERSION****/
@@ -445,6 +454,8 @@ header #header {
   }
   #nav-menu-main nav ul li a {
     color: rgba(255, 255, 255, 0);
+    -webkit-transition: color 900ms ease;
+    transition: color 900ms ease;
   }
   #hamburger-checkbox:checked ~ #nav-menu-main {
     visibility: visible;
@@ -471,8 +482,8 @@ header #header {
     -webkit-transform: translateY(-3px) rotate(-45deg);
             transform: translateY(-3px) rotate(-45deg);
   }
-  #hamburger-checkbox:checked #delivery-link {
-    display: none;
+  #hamburger-checkbox:checked ~ #brand-sm a {
+    color: #ffe7d1;
   }
   #hamburger-icon {
     display: block;
@@ -505,6 +516,12 @@ header #header {
   #nav-menu-main nav ul li a:hover {
     background: #015f88;
     color: white;
+  }
+}
+
+@media (max-width: 700px) {
+  #brand-sm {
+    padding-left: 1.5rem;
   }
 }
 
@@ -632,6 +649,23 @@ footer {
 
 #banner-our-vision {
   background-image: url(images/banner-our-vision.jpg);
+}
+
+#banner-menu {
+  background-image: url("images/banner-menu.jpg");
+}
+
+#banner-delivery {
+  background-image: url("images/banner-delivery.jpg");
+}
+
+#banner-contact {
+  background-image: url("images/banner-contact.jpg");
+}
+
+#google-map {
+  height: 450px;
+  width: 100%;
 }
 
 /*
