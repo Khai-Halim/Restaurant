@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat&family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/62b2529a2a.js" crossorigin="anonymous"></script>
     <title>Restaurant</title>
@@ -41,12 +42,12 @@
         </div>
         <div class="bg-1">
             <div class="container flex-between ">
-                <div id="brand-sm">
-                    <a href="index.html"> <img src="images/logo3.png" alt="Flaming fusion logo"></a>
-                </div>
                 <!--Hamburger-->
                 <input type="checkbox" id="hamburger-checkbox">
                 <label id="hamburger-icon" for="hamburger-checkbox"><span ></span></label>
+                <div id="brand-sm"> 
+                    <a href="index.html"> Flaming Fusion</a>
+                </div>
                 <div id="cover-screen"></div>
                 <div id="nav-menu-main" >    
                     <nav class="nav-row">
@@ -61,48 +62,54 @@
                 </div>
             </div>
         </div>
-        
     </header>
                                         <!--******END HEADER*******-->
-    <div id="banner" class="banner">
+    <div id="banner-contact" class="banner">
     </div>                   
     <main>
         <div class="bg-1">
             <div id="welcome" class="container">
-                <span>Welcome to</span>
+                <span>Contact</span>
                 <h1>Flaming Fusion</h1>
             </div>
         </div>
                                  <!--START INTRO-->
         <div class="bg-1">
             <div id="main-cols" class="container cols-even">
-                <div id="main-col-1">
-                    <img src="images/chef.jpg" alt="chef at flaming fusion" class="mg-bottom">
+                <div id="main-col-1" class="col">
+                    <div class="text-wrapper">
+                        <address id="address-header">A: 178 Peel St, Tamworth <br> NSW 2340 <br> Ph: (02) 6766 9054 
+                        </address>
+                        <div>
+                            Mon-Sun <br>
+                            10am - 9pm
+                        </div>
+                    </div>
                     <img src="images/chopping.jpg" alt="flaming fusion food preparation ">
                 </div>
                 <div id="main-col-2">
-                    <div class="border-top">
+                    <div class="border-top col">
                         <div class="text-wrapper">
-                            <h2>Food for all</h2>
+                            <h2>Find us here</h2>
                         </div>
-                        <div class="text-wrapper">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum natus laborum unde alias deleniti officia, suscipit ab maiores sed error perferendis hic. Laborum sapiente officiis nesciunt voluptatibus cupiditate accusantium quo.Eos quos, beatae voluptatibus quod exercitationem praesentium error in laudantium minima asperiores maiores eligendi assumenda hic! Cumque aliquid sequi dolor, ad corporis alias! Eveniet culpa beatae nostrum. Quo, hic aliquam.</p>          
+                        <div>
+                            <iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6834.109247434007!2d150.91265007579423!3d-31.080407532655872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b0a9f8dc82df813%3A0xf2f4a793e277f1bc!2sFlaming%20Fusion!5e0!3m2!1sen!2sau!4v1587623332120!5m2!1sen!2sau" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>           
                         </div>
                         <div class="text-wrapper">
                             <a href="#" class="link-1">Check out our menu here</a>
                         </div>
-                        <img src="images/banner.jpg" alt="Flaming fusion burger" class="mg-bottom">
+                        <img src="images/banner.jpg" alt="Flaming fusion burger">
                         <img src="images/rice.jpg" alt="Flaming fusion rice">
                     </div>
                 </div>
                 
             </div>
-            <!--**END INTRO-->
+                <!--**END INTRO-->
             <!--**START FOOD DELIVERY**-->
             <div class="container cols-even">
-                <div id="delivery-link">
+                <div id="delivery-link" class="col">
                     <img src="images/delivery.jpg" alt="Tamworth food delivery">
-                    <div><a href="#">Order now</a></div>
+                     <div><a href="#">Order now</a></div>
                 </div>
             </div>             
         </div>
@@ -121,3 +128,5 @@
     </footer>
 </body>
 </html>
+
+<!--Added a google map-->
